@@ -1,15 +1,18 @@
-let name = "Нина Петровна"
+//Задача №1 и №2
+
+let myName = "Нина Петровна"
 let message = `Привет, мир! Меня зовут ${name}.`
+
 let algebra = 3;
 let geography = 4;
 let physics = 3;
 
+let average = (algebra + geography + physics) / 3;
 
 console.log(message);
-let average = (algebra + geography + physics) / 3;
 console.log(average);
 
-console.log("задача №3");
+//Задача №3
 
 let x = 2;
 let y = 22;
