@@ -1,7 +1,7 @@
 //Задача №1 и №2
 
 let myName = "Нина Петровна"
-let message = `Привет, мир! Меня зовут ${name}.`
+let message = `Привет, мир! Меня зовут ${myName}.`
 
 let algebra = 3;
 let geography = 4;
