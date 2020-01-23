@@ -30,12 +30,18 @@ function calculateAverageRating(){
     window.averageMark.textContent = averageMark;
 }
 
-function getAverageMark(marks){
-    let averageMark;
-    let sum = 0;
+function getAverageMark(marks) {
+    let marksSum = 0;
+
+    if (marks.length > 5) {
+        alert ("Колличество оценок превышает допустимые нормы,\n будут приняты первые 5 значений.");
+        marks.splice(5); 
+    }
     
-    if (marks.length > 5){
-        
+    for (let i = 0; i <= marks.length - 1; i++) {
+        marksSum += marks[i];
+    }
+        return marksSum / marks.length;
 }
 
 function calculateDrinkTask(){
@@ -46,5 +52,10 @@ function calculateDrinkTask(){
 }
 
 function askDrink(name,dateOfBirthday){
-
-}
+    if (new Date().getFullYear() - dateOfBirthday.getFullYear() >= 18){
+      result = `Не желаете ли олд-фэшн, ${name}?`;
+    } else{
+      result = `Сожалею, ${name}, но я не могу вам продать алкоголь. Зато могу предложить вам замечательный клюквенный компот!`;
+    }
+    return result;
+} 
